@@ -114,4 +114,4 @@ theme: pure
 deploy:
     type: git
     repo: https://github.com/Ychangqing/Ychangqing.github.io
-    branch: gh-pages
+    branch: master
