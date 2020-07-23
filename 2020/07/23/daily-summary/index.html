@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>日常总结 | Hexo</title>
+  <meta name="description" content="总结了一些在工作中常用js工具函数  更新：函数越来越多，直接将其打包放在GitHub中，日后使用时直接安装npm包 npm地址1npm install js-tool-function  开始去重插入123456pushIfNotExist &#x3D; function(array, elem) &amp;#123;  if (array.indexOf(elem) &#x3D;&#x3D; -1) &amp;#123;    array">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日常总结">
+<meta property="og:url" content="https://ychangqing.github.io/2020/07/23/daily-summary/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="总结了一些在工作中常用js工具函数  更新：函数越来越多，直接将其打包放在GitHub中，日后使用时直接安装npm包 npm地址1npm install js-tool-function  开始去重插入123456pushIfNotExist &#x3D; function(array, elem) &amp;#123;  if (array.indexOf(elem) &#x3D;&#x3D; -1) &amp;#123;    array">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-23T03:11:50.626Z">
+<meta property="article:modified_time" content="2020-07-23T06:59:48.275Z">
+<meta property="article:author" content="Ychangqing">
+<meta property="article:tag" content="JS常用工具函数">
+<meta property="article:tag" content="服务器搭建">
+<meta property="article:tag" content="webpack配置">
+<meta property="article:tag" content="每日一题">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://ychangqing.github.io/2020/07/23/daily-summary/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="../images/avatar.jpeg" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/Ychangqing" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpeg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">长情</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Development Engineer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shanghai, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/Ychangqing" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" rel="tag">JS常用工具函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack%E9%85%8D%E7%BD%AE/" rel="tag">webpack配置</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" rel="tag">服务器搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" rel="tag">每日一题</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/JS%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" style="font-size: 13px;">JS常用工具函数</a> <a href="/tags/webpack%E9%85%8D%E7%BD%AE/" style="font-size: 13px;">webpack配置</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" style="font-size: 13px;">服务器搭建</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 13px;">每日一题</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/07/23/daily-summary/" class="title">日常总结</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-07-23T03:11:50.626Z" itemprop="datePublished">2020-07-23</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-daily-summary" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      日常总结
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/07/23/daily-summary/" class="article-date">
+	  <time datetime="2020-07-23T03:11:50.626Z" itemprop="datePublished">2020-07-23</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/JS%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" rel="tag">JS常用工具函数</a>, <a class="article-tag-link" href="/tags/webpack%E9%85%8D%E7%BD%AE/" rel="tag">webpack配置</a>, <a class="article-tag-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" rel="tag">服务器搭建</a>, <a class="article-tag-link" href="/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" rel="tag">每日一题</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/07/23/daily-summary/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>总结了一些在工作中常用js工具函数</p>
+<blockquote>
+<p>更新：函数越来越多，直接将其打包放在GitHub中，日后使用时直接安装npm包</p>
+<h4 id="npm地址"><a href="#npm地址" class="headerlink" title="npm地址"></a>npm地址</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install js-tool-<span class="function"><span class="keyword">function</span></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h4 id="去重插入"><a href="#去重插入" class="headerlink" title="去重插入"></a>去重插入</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pushIfNotExist = <span class="function"><span class="keyword">function</span>(<span class="params">array, elem</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (array.indexOf(elem) == <span class="number">-1</span>) &#123;</span><br><span class="line">    array.push(elem);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="去重合并数组"><a href="#去重合并数组" class="headerlink" title="去重合并数组"></a>去重合并数组</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pushApply = <span class="function"><span class="keyword">function</span>(<span class="params">a, b=[]</span>) </span>&#123;</span><br><span class="line">  a.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">    pushIfNotExist(b, value);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="美化日期间隔"><a href="#美化日期间隔" class="headerlink" title="美化日期间隔"></a>美化日期间隔</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">timeDifference = <span class="function"><span class="keyword">function</span>(<span class="params">previous</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> current = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">let</span> msPerMinute = <span class="number">60</span> * <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">let</span> msPerHour = msPerMinute * <span class="number">60</span>;</span><br><span class="line">    <span class="keyword">let</span> msPerDay = msPerHour * <span class="number">24</span>;</span><br><span class="line">    <span class="keyword">let</span> msPerMonth = msPerDay * <span class="number">30</span>;</span><br><span class="line">    <span class="keyword">let</span> msPerYear = msPerDay * <span class="number">365</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> elapsed = current - previous;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (elapsed &lt; msPerMinute) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'刚刚'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (elapsed &lt; msPerHour) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.round(elapsed / msPerMinute) + <span class="string">' 分钟前'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (elapsed &lt; msPerDay) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.round(elapsed / msPerHour) + <span class="string">' 小时前'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (elapsed &lt; msPerMonth) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.round(elapsed / msPerDay) + <span class="string">' 天前'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (elapsed &lt; msPerYear) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.round(elapsed / msPerMonth) + <span class="string">' 月前'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'一年前'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="编译阿里云OSS文件URL"><a href="#编译阿里云OSS文件URL" class="headerlink" title="编译阿里云OSS文件URL"></a>编译阿里云OSS文件URL</h4><blockquote>
+<p>我不知道为什么阿里底层存储URL的逻辑会是这样，但是如果文件名中带有复杂字符串，浏览器默认的编译结果和阿里OSS编译的结果不一样，导致无法打开文件，实际上文件确实已经存储在OSS中了</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">getAliOSSUrl = <span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">encodeURIComponent</span>(url)</span><br><span class="line">        .replace(<span class="regexp">/%2F/g</span>, <span class="string">'/'</span>)</span><br><span class="line">        .replace(<span class="regexp">/\+/g</span>, <span class="string">'%2B'</span>)</span><br><span class="line">        .replace(<span class="string">'%3A'</span>, <span class="string">':'</span>)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="获取字符串的HashCode"><a href="#获取字符串的HashCode" class="headerlink" title="获取字符串的HashCode"></a>获取字符串的HashCode</h4><blockquote>
+<p>使用场景：有十个长度的颜色的数组，colorArr = [#000, #fff, …]，数据库中有一百个title，让每个title都有属于自己的颜色： <strong><em>colorArr[getHashCode(title) % colorArr.length]</em></strong></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">getHashCode = <span class="function"><span class="keyword">function</span>(<span class="params">str, caseSensitive</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!caseSensitive) &#123;</span><br><span class="line">        str = str.toLowerCase();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> hash = <span class="number">1315423911</span>, i, ch;</span><br><span class="line">    <span class="keyword">for</span> (i = str.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        ch = str.charCodeAt(i);</span><br><span class="line">        hash ^= ((hash &lt;&lt; <span class="number">5</span>) + ch + (hash &gt;&gt; <span class="number">2</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (hash &amp; <span class="number">0x7FFFFFFF</span>);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="数组判断是否包含"><a href="#数组判断是否包含" class="headerlink" title="数组判断是否包含"></a>数组判断是否包含</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hasElement = <span class="function"><span class="keyword">function</span>(<span class="params">array, elem</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> isNonEmptyArray(array) &amp;&amp; array.indexOf(elem) != <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="判断是否为IOS系统"><a href="#判断是否为IOS系统" class="headerlink" title="判断是否为IOS系统"></a>判断是否为IOS系统</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">isIOS = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> u = navigator.userAgent</span><br><span class="line">  <span class="keyword">return</span> !!u.match(<span class="regexp">/\(i[^;]+;( U;)? CPU.+Mac OS X/</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="判断是否为Android系统"><a href="#判断是否为Android系统" class="headerlink" title="判断是否为Android系统"></a>判断是否为Android系统</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">isAndroid = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> u = navigator.userAgent</span><br><span class="line">  <span class="keyword">return</span> u.indexOf(<span class="string">'Android'</span>) &gt; <span class="number">-1</span> || u.indexOf(<span class="string">'Adr'</span>) &gt; <span class="number">-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="一个简单的debounce函数，用于触底加载"><a href="#一个简单的debounce函数，用于触底加载" class="headerlink" title="一个简单的debounce函数，用于触底加载"></a>一个简单的debounce函数，用于触底加载</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">debounce = <span class="function"><span class="keyword">function</span>(<span class="params">func, wait, immediate</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> timeout</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> context = e</span><br><span class="line">    <span class="keyword">let</span> later = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      timeout = <span class="literal">null</span></span><br><span class="line">      <span class="keyword">if</span> (!immediate) &#123;</span><br><span class="line">        func.apply(context)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    clearTimeout(timeout)</span><br><span class="line">    timeout = setTimeout(later, wait)</span><br><span class="line">    <span class="keyword">if</span> (immediate &amp;&amp; !timeout) &#123;</span><br><span class="line">      func.apply(context)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="简单的模版渲染函数"><a href="#简单的模版渲染函数" class="headerlink" title="简单的模版渲染函数"></a>简单的模版渲染函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// "Hello, &#123;name&#125;, are you feeling &#123;adjective&#125;?".formatUnicorn(&#123;name:"Gabriel", adjective: "OK"&#125;);</span></span><br><span class="line"><span class="built_in">String</span>.prototype.formatUnicorn = <span class="built_in">String</span>.prototype.formatUnicorn || <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> str = <span class="keyword">this</span>.toString();</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">arguments</span>.length) &#123;</span><br><span class="line">    <span class="keyword">let</span> t = <span class="keyword">typeof</span> <span class="built_in">arguments</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">let</span> key;</span><br><span class="line">    <span class="keyword">let</span> args = (<span class="string">"string"</span> === t || <span class="string">"number"</span> === t) ? <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>) : <span class="built_in">arguments</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (key <span class="keyword">in</span> args) &#123;</span><br><span class="line">      str = str.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"\\&#123;"</span> + key + <span class="string">"\\&#125;"</span>, <span class="string">"gi"</span>), args[key]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> str;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="数组转对象"><a href="#数组转对象" class="headerlink" title="数组转对象"></a>数组转对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">array2object = <span class="function"><span class="keyword">function</span>(<span class="params">array = [], keys = &#123;&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res = &#123;&#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">    res[keys[i]] = <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://ychangqing.github.io/2020/07/23/daily-summary/" title="日常总结" target="_blank" rel="external">https://ychangqing.github.io/2020/07/23/daily-summary/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/Ychangqing" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpeg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/Ychangqing" target="_blank"><span class="text-dark">长情</span><small class="ml-1x">Web Development Engineer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipay.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wxpay.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/Ychangqing" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>

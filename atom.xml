@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://ychangqing.github.io/"/>
+  <updated>2020-07-23T06:59:48.275Z</updated>
+  <id>https://ychangqing.github.io/</id>
+  
+  <author>
+    <name>Ychangqing</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日常总结</title>
+    <link href="https://ychangqing.github.io/2020/07/23/daily-summary/"/>
+    <id>https://ychangqing.github.io/2020/07/23/daily-summary/</id>
+    <published>2020-07-23T03:11:50.626Z</published>
+    <updated>2020-07-23T06:59:48.275Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;总结了一些在工作中常用js工具函数&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更新：函数越来越多，直接将其打包放在GitHub中，日后使用时直接安装npm包&lt;/p&gt;
+&lt;h4 id=&quot;npm地址&quot;&gt;&lt;a href=&quot;#npm地址&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+    
+    
+      <category term="JS常用工具函数" scheme="https://ychangqing.github.io/tags/JS%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="服务器搭建" scheme="https://ychangqing.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="webpack配置" scheme="https://ychangqing.github.io/tags/webpack%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="每日一题" scheme="https://ychangqing.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
+  
+</feed>
