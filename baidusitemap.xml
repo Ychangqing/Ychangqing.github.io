@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ychangqing.github.io/2020/09/25/docker/</loc>
+    <lastmod>2020-09-25</lastmod>
+  </url>
+  <url>
     <loc>https://ychangqing.github.io/2020/07/23/daily-summary/</loc>
-    <lastmod>2020-07-23</lastmod>
+    <lastmod>2020-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://ychangqing.github.io/2020/07/30/one-question-per-day/</loc>
+    <lastmod>2020-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://ychangqing.github.io/2020/07/30/interesting-code/</loc>
+    <lastmod>2020-07-30</lastmod>
   </url>
 </urlset> 

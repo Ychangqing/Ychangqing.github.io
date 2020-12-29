@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Ychangqing Web Development Engineer</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ychangqing.github.io/"/>
-  <updated>2020-07-23T06:59:48.275Z</updated>
+  <updated>2020-09-25T14:51:37.452Z</updated>
   <id>https://ychangqing.github.io/</id>
   
   <author>
@@ -17,11 +17,84 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何使用docker部署一个vue项目</title>
+    <link href="https://ychangqing.github.io/2020/09/25/docker/"/>
+    <id>https://ychangqing.github.io/2020/09/25/docker/</id>
+    <published>2020-09-24T16:00:00.000Z</published>
+    <updated>2020-09-25T14:51:37.452Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;记一次在服务器使用&lt;code&gt;docker&lt;/code&gt; &lt;code&gt;nginx&lt;/code&gt;部署vue项目的例子&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; tit
+      
+    
+    </summary>
+    
+    
+      <category term="服务器" scheme="https://ychangqing.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="docker" scheme="https://ychangqing.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每天一道算法题</title>
+    <link href="https://ychangqing.github.io/2020/07/30/one-question-per-day/"/>
+    <id>https://ychangqing.github.io/2020/07/30/one-question-per-day/</id>
+    <published>2020-07-29T16:00:00.000Z</published>
+    <updated>2020-07-30T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;每天一道leetcode算法题！！！&quot;&gt;&lt;a href=&quot;#每天一道leetcode算法题！！！&quot; class=&quot;headerlink&quot; title=&quot;每天一道leetcode算法题！！！&quot;&gt;&lt;/a&gt;每天一道leetcode算法题！！！&lt;/h2&gt;&lt;h4 id=&quot;2
+      
+    
+    </summary>
+    
+    
+    
+      <category term="每日一题" scheme="https://ychangqing.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用node写一个获取bing每日图片的小工具</title>
+    <link href="https://ychangqing.github.io/2020/07/30/interesting-code/"/>
+    <id>https://ychangqing.github.io/2020/07/30/interesting-code/</id>
+    <published>2020-07-29T16:00:00.000Z</published>
+    <updated>2020-07-30T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;摘要-amp-目录&quot;&gt;&lt;a href=&quot;#摘要-amp-目录&quot; class=&quot;headerlink&quot; title=&quot;摘要&amp;amp;目录&quot;&gt;&lt;/a&gt;摘要&amp;amp;目录&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;摘要：&lt;/strong&gt;办公室这么多块屏幕，闲置的屏幕总是显示一张桌
+      
+    
+    </summary>
+    
+    
+      <category term="有意思的代码" scheme="https://ychangqing.github.io/categories/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="有意思的代码" scheme="https://ychangqing.github.io/tags/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>日常总结</title>
     <link href="https://ychangqing.github.io/2020/07/23/daily-summary/"/>
     <id>https://ychangqing.github.io/2020/07/23/daily-summary/</id>
-    <published>2020-07-23T03:11:50.626Z</published>
-    <updated>2020-07-23T06:59:48.275Z</updated>
+    <published>2020-07-22T16:00:00.000Z</published>
+    <updated>2020-09-25T07:48:47.578Z</updated>
     
     <summary type="html">
     
@@ -36,14 +109,10 @@
     </summary>
     
     
+      <category term="test啥都会" scheme="https://ychangqing.github.io/categories/test%E5%95%A5%E9%83%BD%E4%BC%9A/"/>
+    
     
       <category term="JS常用工具函数" scheme="https://ychangqing.github.io/tags/JS%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="服务器搭建" scheme="https://ychangqing.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
-    
-      <category term="webpack配置" scheme="https://ychangqing.github.io/tags/webpack%E9%85%8D%E7%BD%AE/"/>
-    
-      <category term="每日一题" scheme="https://ychangqing.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
     
   </entry>
   
