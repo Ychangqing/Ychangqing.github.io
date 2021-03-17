@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Ychangqing Web Development Engineer
-subtitle: ''
-description: ''
-keywords:
+title: "Ychangqing Web Development Engineer"
+subtitle: ""
+description: ""
+keywords: "技术分享 Vue ant-design-vue antd JS 工具函数"
 author: Ychangqing
 language: zh-CN
-timezone: ''
+timezone: ""
 
 ## sitemap
 sitemap:
@@ -17,7 +17,7 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
-## feed   
+## feed
 feed:
   type: atom
   path: atom.xml
@@ -52,7 +52,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -62,7 +62,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 
@@ -71,7 +71,7 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -112,6 +112,6 @@ theme: pure
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-    type: git
-    repo: https://github.com/Ychangqing/Ychangqing.github.io
-    branch: master
+  type: git
+  repo: https://github.com/Ychangqing/Ychangqing.github.io
+  branch: master
