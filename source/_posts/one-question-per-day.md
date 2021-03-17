@@ -328,3 +328,9 @@ var countConsistentStrings = function(allowed, words) {
 ```
 
 
+#### 2020-12-05 [1684. 统计一致字符串的数目](https://leetcode-cn.com/problems/count-the-number-of-consistent-strings/)
+```javascript
+var countConsistentStrings = function(allowed, words) {
+
+};
+```
