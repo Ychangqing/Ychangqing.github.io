@@ -1,7 +1,7 @@
 ---
 title: 日常总结
-data: 2020-07-23 11:13:00
-tags: [JS常用工具函数, 服务器搭建, webpack配置, 每日一题]
+date: 2020-07-23
+tags: [JS常用工具函数]
 ---
 总结了一些在工作中常用js工具函数
 > 更新：函数越来越多，直接将其打包放在GitHub中，日后使用时直接安装npm包
@@ -34,6 +34,16 @@ pushApply = function(a, b=[]) {
   a.forEach(function(value) {
     pushIfNotExist(b, value);
   });
+}
+```
+
+#### 获取ArrayOfObject 中的valu
+``` javascript
+getFields = function (arrayOfObject, key) {
+    let output = [];
+    for (let i = 0; i < arrayOfObject.length; ++i)
+        output.push(arrayOfObject[i][key]);
+    return output;
 }
 ```
 
