@@ -328,9 +328,46 @@ var countConsistentStrings = function(allowed, words) {
 ```
 
 
-#### 2020-12-05 [1684. 统计一致字符串的数目](https://leetcode-cn.com/problems/count-the-number-of-consistent-strings/)
+#### 2020-12-05 **并发限制异步调度器**
 ```javascript
-var countConsistentStrings = function(allowed, words) {
+class Scheduler {
+    constructor() {
+        this.runCount = 0
+        this.taskList = []
+        this.pendingList = []
+    }
+    add(promiseCrator) {
+        return new Promise(resolve => {
+            this.taskList.push([promiseCrator, resolve])
+            this.runTask()
+        })
+    }
 
-};
+    runTask() {
+        if (this.taskList.length && this.runCount < 2) {
+            const [promiseCrator, resolve] = this.taskList.shift()
+            this.runCount += 1
+            promiseCrator().then(() => {
+                resolve()
+                this.runCount -= 1
+                this.runTask()
+            })
+        }
+    }
+}
+
+const timeout = (time) => new Promise((resolve, reject) => {
+    setTimeout(resolve, time);
+})
+const scheduler = new Scheduler();
+
+const addTask = (time, order) => {
+    scheduler.add(() => timeout(time)).then(() => console.log(order))
+}
+
+addTask(1000, '1')
+addTask(500, '2')
+addTask(300, '3')
+addTask(400, '4')
+// 输出顺序：2 3 1 4
 ```
