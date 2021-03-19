@@ -1,54 +1,48 @@
 /*
  * @Author: Yin Xiang Zheng
  * @LastEditors: Yin Xiang Zheng
- * @LastEditTime: 2021-03-18 14:58:33
+ * @LastEditTime: 2021-03-19 10:56:56
  */
 // https://ask.qcloudimg.com/http-save/yehe-2790081/iflcmtr8e0.png?imageView2/2/w/1620
-class Scheduler {
+class BinarySearchTree {
     constructor() {
-        this.runCount = 0
-        this.taskList = []
-        this.pendingList = []
-    }
-    add(promiseCrator) {
-        'sss'.s
-        return new Promise(resolve => {
-            this.taskList.push([promiseCrator, resolve])
-            this.runTask()
-        })
-        1  2 0
-        2  2 1
-        4  2 2
-        8  2 3
-        16 2 4
-        32 2 5
+        this.Node = function (key) {
+            this.key = key
+            this.left = this.right = null
+            return this
+        }
+        this.root = null
     }
 
+    insert(key) {
+        const newNode = this.Node(key)
+        console.log(newNode, this.Node(1));
+        if (this.root === null) {
+            this.root = newNode
+        } else {
+            this.insertNode(newNode, this.root)
+        }
+    }
 
-
-    runTask() {
-        if (this.taskList.length && this.runCount < 2) {
-            const [promiseCrator, resolve] = this.taskList.shift()
-            this.runCount += 1
-            promiseCrator().then(() => {
-                resolve()
-                this.runCount -= 1
-                this.runTask()
-            })
+    insertNode(newNode, root) {
+        if (newNode.key < root.key) {
+            if (root.left === null) {
+                root.left = newNode
+            } else {
+                this.insertNode(newNode, root.left)
+            }
+        } else {
+            if (root.right === null) {
+                root.right = newNode
+            } else {
+                this.insertNode(newNode, root.right)
+            }
         }
     }
 }
 
-const timeout = (time) => new Promise((resolve, reject) => {
-    setTimeout(resolve, time);
-})
-const scheduler = new Scheduler();
-
-const addTask = (time, order) => {
-    scheduler.add(() => timeout(time)).then(() => console.log(order))
-}
-
-addTask(10000, '1')
-addTask(500, '2')
-addTask(300, '3')
-addTask(400, '4')
+const binarySearchTree = new BinarySearchTree()
+binarySearchTree.insert(5)
+binarySearchTree.insert(4)
+binarySearchTree.insert(3)
+console.log(binarySearchTree.root);
